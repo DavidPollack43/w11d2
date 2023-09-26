@@ -6,6 +6,7 @@ import App from './App';
 import ThemeProvider from './context/ThemeContext';
 
 function Root() {
+  
   return (
       <ThemeProvider>
         <BrowserRouter>
