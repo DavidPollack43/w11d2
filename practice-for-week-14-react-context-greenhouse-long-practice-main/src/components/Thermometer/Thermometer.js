@@ -9,14 +9,10 @@ function Thermometer() {
   useEffect(() => {
     console.log("In use effect")
     let x;
-    if (goalTemp > temp) {
-      x = 1
-    } else if (goalTemp < temp) {
-      x =  -1
-    } else {
-      x = 0
-    }
-    setTimeout(()=> setTemp(temp => temp + x), 1000)
+    if (goalTemp > temp) x = 1
+    else if (goalTemp < temp) x =  -1
+    else x = 0
+    setTimeout(()=> setTemp(temp => temp + x), 1000);
     console.log(temp)
   }, [goalTemp, temp])
 
