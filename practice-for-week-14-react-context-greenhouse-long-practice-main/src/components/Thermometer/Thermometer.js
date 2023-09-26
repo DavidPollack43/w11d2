@@ -7,6 +7,7 @@ function Thermometer() {
   const {temp, setTemp} = useClimateContext(); //actual temperature
   const [goalTemp, setGoalTemp] = useState(temp); //goal temperature
   useEffect(() => {
+    console.log("In use effect")
     let x;
     if (goalTemp > temp) {
       x = 1
@@ -17,7 +18,7 @@ function Thermometer() {
     }
     setTimeout(()=> setTemp(temp => temp + x), 1000)
     console.log(temp)
-  }, [temp])
+  }, [goalTemp, temp])
 
   return (
     <section>
