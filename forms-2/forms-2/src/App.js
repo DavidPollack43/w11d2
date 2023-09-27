@@ -1,6 +1,10 @@
+import NavBar from "./components/Navigation/NavBar";
+
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <>
+      <NavBar/>
+    </>
   );
 }
 
